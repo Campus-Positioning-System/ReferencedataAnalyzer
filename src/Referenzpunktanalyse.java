@@ -7,7 +7,8 @@ import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Iterator;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Referenzpunktanalyse {
 
@@ -36,10 +37,19 @@ public class Referenzpunktanalyse {
                     .build();
 
 
-            ReferenceRecordStore Store = new ReferenceRecordStore(csvToBean);
+            /*ReferenceRecordStore Store = new ReferenceRecordStore(csvToBean);
             Store.printPostionList();
             Store.printUniqueSSIDs();
-            Store.printAPcountForAllPositions();
+            Store.printAPcountForAllPositions();*/
+            List<String> allowedIDs = new ArrayList<>();
+            allowedIDs.add("eduroam");
+            allowedIDs.add("HFU Open");
+            allowedIDs.add("HFU Guest");
+            ReferenceRecordStore cleanStore = new ReferenceRecordStore(csvToBean, allowedIDs);
+            System.out.println("\n===\nCleaned\n===\n");
+            cleanStore.printPostionList();
+            cleanStore.printUniqueSSIDs();
+            cleanStore.printAPcountForAllPositions();
             /*
             Iterator<CSVRecord> csvUserIterator = csvToBean.iterator();
             System.out.println("Looping now");
