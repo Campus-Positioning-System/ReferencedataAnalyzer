@@ -47,6 +47,7 @@ public class Referenzpunktanalyse {
             allowedIDs.add("HFU Guest");
             ReferenceRecordStore cleanStore = new ReferenceRecordStore(csvToBean, allowedIDs);
             System.out.println("\n===\nCleaned\n===\n");
+            cleanStore.printTotalRecordCount();
             cleanStore.printPostionList();
             cleanStore.printUniqueSSIDs();
             cleanStore.printAPcountForAllPositions();

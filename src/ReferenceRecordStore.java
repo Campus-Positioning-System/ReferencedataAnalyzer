@@ -1,6 +1,7 @@
 import com.opencsv.bean.CsvToBean;
 import java.util.*;
 
+
 public class ReferenceRecordStore {
 
     List<Integer> capturedPositions = new ArrayList<>();
@@ -82,9 +83,32 @@ public class ReferenceRecordStore {
      * Prints all position and the amount of APs associated with it
      */
     public void printAPcountForAllPositions(){
+        Map<String, List<CSVRecord>> richtungen = new HashMap<>();
         for(int pos : records.keySet()){
-            System.out.println("Position " + pos + " has " + records.get(pos).size() + " Access Points"); //FIXME Winkel wird ignoriert, falsches Ergebnis!
+            for(CSVRecord record : records.get(pos)){
+                if(!richtungen.containsKey(record.getRichtung())){
+                    richtungen.put(record.getRichtung(), new ArrayList<>());
+                    richtungen.get(record.getRichtung()).add(record);
+                }else{
+                    richtungen.get(record.getRichtung()).add(record);
+                }
+            }
+            System.out.println("Position " + pos + " has " + richtungen.keySet().size() + " Directions"); //FIXME Winkel wird ignoriert, falsches Ergebnis!
+            for(String richtung : richtungen.keySet()){
+                System.out.println("\tDirection " + richtung + " has " + richtungen.get(richtung).size() + " Access Points");
+            }
+
+
         }
+    }
+
+    /**
+     * Prints the total amount of record in store
+     */
+    public void printTotalRecordCount(){
+        int totalCount = 0;
+        for(int position : records.keySet()) totalCount += records.get(position).size();
+        System.out.println("Record store has " + totalCount + " records.");
     }
 
 

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8750dd01-d418-4596-bd09-50f15a5e750a" name="Changes" comment="Initial Commit">
+    <list default="true" id="8750dd01-d418-4596-bd09-50f15a5e750a" name="Changes" comment="Added filter method to constructor of ReferenceRecordStore">
       <change beforePath="$PROJECT_DIR$/Referenzpunktanalyse.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Referenzpunktanalyse.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Referenzpunktanalyse/ReferenceRecordStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Referenzpunktanalyse/ReferenceRecordStore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Referenzpunktanalyse/Referenzpunktanalyse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Referenzpunktanalyse/Referenzpunktanalyse.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ReferenceRecordStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReferenceRecordStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Referenzpunktanalyse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Referenzpunktanalyse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +77,10 @@
       <option name="presentableId" value="Default" />
       <updated>1651071219350</updated>
       <workItem from="1651071220434" duration="8842000" />
-      <workItem from="1651148838611" duration="2553000" />
+      <workItem from="1651148838611" duration="2618000" />
+      <workItem from="1651586150411" duration="39000" />
+      <workItem from="1651748974893" duration="3185000" />
+      <workItem from="1652010522911" duration="383000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1651088800913</created>
@@ -85,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651088800913</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added filter method to constructor of ReferenceRecordStore">
+      <created>1651152245548</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1651152245548</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,7 +115,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="Added filter method to constructor of ReferenceRecordStore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added filter method to constructor of ReferenceRecordStore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
